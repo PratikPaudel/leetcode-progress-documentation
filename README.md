@@ -67,3 +67,33 @@
         return maxprofit;
   ```
 </details>          
+
+### Contains Duplicate
+
+<details>
+  <summary>Hint</summary>
+  
+  - [x] Create a HashSet to store seen integers.
+  - [x] Loop through each integer in the array.
+  - [x] Try to add each integer to the HashSet.
+  - [x] If adding the integer returns false, return true (found a duplicate).
+  - [x] If the loop completes without finding duplicates, return false.
+        
+</details>
+
+<details>
+  <summary>Solutions:</summary>
+  
+  ```java:
+ public boolean containsDuplicate(int[] nums) {
+        Set<Integer> set = new HashSet<Integer>();
+        for (int num : nums) {
+            if (set.contains(num)) {
+                return true;
+            }
+            set.add(num);
+        }
+        return false;
+    }
+  ```
+</details>          
