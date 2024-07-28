@@ -97,3 +97,44 @@
     }
   ```
 </details>          
+
+### Product of Array Except Self
+
+<details>
+  <summary>Hint</summary>
+  
+  - [x] Create prefixProducts, suffixProducts, and resultArray arrays.
+  - [x] Set prefixProducts[0] to 1 and suffixProducts[length-1] to 1.
+  - [x] Iterate from left to right, storing cumulative products in prefixProducts.
+  - [x] Iterate from right to left, storing cumulative products in suffixProducts.
+  - [x] Multiply corresponding elements of prefixProducts and suffixProducts to fill resultArray.
+  - [x] Return the final resultArray.
+  - [ ] <a href="https://www.youtube.com/watch?v=tSRFtR3pv74"> YouTube </a>
+</details>
+
+<details>
+  <summary>Solutions:</summary>
+  
+  ```java:
+ int length = nums.length;
+        int[] prefixProducts = new int[length];
+        prefixProducts[0] = 1;
+        int[] suffixProducts = new int[length];
+        suffixProducts[length - 1] = 1;
+        int[] resultArray = new int[length];
+
+        for (int i = 1; i < length; i++) {
+            prefixProducts[i] = nums[i - 1] * prefixProducts[i - 1];  
+        }
+
+        for (int i = length - 2; i >= 0; i--) {
+            suffixProducts[i] = nums[i + 1] * suffixProducts[i + 1];
+        }
+
+        for (int i = 0; i < length; i++) {
+            resultArray[i] = prefixProducts[i] * suffixProducts[i];   
+        }
+
+        return resultArray;
+  ```
+</details>          
