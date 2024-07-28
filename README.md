@@ -1,3 +1,4 @@
+# Blind 75 LeetCode Problems with hint, and optimal solutions.
 ## Arrays 
 
 ### Two Sum
@@ -205,3 +206,35 @@
 
 </details>
 
+
+### Find Minimum in Rotated Sorted Array
+
+<details>
+  <summary>Hint</summary>
+  
+   - [x] Initialize Pointers: Set up left and right to cover the entire array.
+   - [x] Binary Search Loop: Narrow down the search range by repeatedly halving it.
+   - [x] Midpoint Calculation: Calculate the midpoint and compare it to the element at right to decide which half to search next.
+   - [x] Adjust Pointers: Move left or right based on the comparison to narrow the search range.
+   - [x] Return Result: When the loop ends, left points to the minimum value.
+   
+  > The midpoint calculation int mid = left + (right - left) / 2 is used in binary search to avoid potential integer overflow and ensure accurate results. When left and right are large, directly using (left + right) / 2 could lead to overflow, as their sum might exceed the maximum integer value. By calculating mid as left + (right - left) / 2, the difference right - left is smaller and less prone to overflow, and dividing by 2 ensures the result is within a safe range. Adding left then adjusts the midpoint correctly within the current search segment, ensuring precise calculations without risking overflow.
+</details>
+
+<details>
+  <summary>Solutions:</summary>
+  
+  ```java:
+        int left = 0;
+        int right = nums.length-1;
+        while (left<right) {
+            int mid = (left+right)/2;
+            if (nums[mid] > nums[right]) {
+                left = mid + 1; 
+            } else {
+                right = mid;
+            }
+        } return nums[left];
+  ```
+
+</details>
