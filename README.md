@@ -168,3 +168,40 @@
         } return maxSum;
   ```
 </details>
+
+### Maximum Product Subarray
+
+<details>
+  <summary>Hint</summary>
+
+   - [x] Initialization: Create prefix and suffix variables, initialize both to 1, and initialize result to 0.
+   - [x] Iteration: Loop through the array from 0 to n-1.
+   - [x] Reset Prefix and Suffix: If prefix or suffix is 0, reset it to 1.
+   - [x] Update Prefix and Suffix: Multiply prefix by nums[i] and suffix by nums[n-i-1].
+   - [x] Update Result: Use Math.max to set result to the maximum of result, prefix, and suffix.
+   - [x] Return Result: Cast result to int and return it.
+   - [ ] <a href="https://www.youtube.com/watch?v=hnswaLJvr6g"> YouTube </a>
+  
+</details>
+
+<details>
+  <summary>Solutions:</summary>
+  
+  ```java:
+        int n= nums.length;
+        double prefix = 1;
+        double suffix = 1;
+        double result = 0;
+        if(n == 1) return nums[0];
+        for (int i=0; i<n; i++) {
+            if (prefix == 0) { prefix = 1;}
+            if (suffix == 0) { suffix = 1;}
+            prefix *= nums[i];
+            suffix *= nums[n-i-1];
+            result = Math.max(result, Math.max(prefix, suffix)); 
+        }
+        return (int) result;
+  ```
+
+</details>
+
