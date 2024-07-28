@@ -20,7 +20,7 @@
   <summary>Solutions:</summary>
   
   ```java:
-  if (nums == null || nums.length < 2) {
+        if (nums == null || nums.length < 2) {
             throw new IllegalArgumentException("Invalid input array");
         }
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -55,7 +55,7 @@
   <summary>Solutions:</summary>
   
   ```java:
-  int minprice = Integer.MAX_VALUE;
+        int minprice = Integer.MAX_VALUE;
         int maxprofit = 0;
         for (int i = 0; i < prices.length; i++) {
             if (prices[i] < minprice) {
@@ -116,7 +116,7 @@
   <summary>Solutions:</summary>
   
   ```java:
- int length = nums.length;
+        int length = nums.length;
         int[] prefixProducts = new int[length];
         prefixProducts[0] = 1;
         int[] suffixProducts = new int[length];
@@ -137,4 +137,34 @@
 
         return resultArray;
   ```
-</details>          
+</details>      
+
+### Maximum Subarray
+
+<details>
+  <summary>Hint</summary>
+
+  - [x] Initialize Variables: Set maxSum to Integer.MIN_VALUE and currSum to 0.
+  - [x] Iterate Through the Array: Add each element to currSum.
+  - [x] Update maxSum: Set maxSum to the greater of maxSum and currSum.
+  - [x] Reset currSum if Negative: If currSum is less than 0, reset it to 0.
+  - [x] Return maxSum: After the loop, return maxSum.
+  - [ ] <a href="https://www.youtube.com/watch?v=hLPkqd60-28"> YouTube Link </a>
+  
+</details>
+
+<details>
+  <summary>Solutions:</summary>
+  
+  ```java:
+        int maxSum = Integer.MIN_VALUE;
+        int currSum = 0;
+        for(int i=0; i<nums.length; i++) {
+            currSum += nums[i];
+            maxSum = Math.max(maxSum, currSum);
+            if (currSum < 0) {
+                currSum = 0;
+            }
+        } return maxSum;
+  ```
+</details>
