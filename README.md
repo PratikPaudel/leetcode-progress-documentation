@@ -284,3 +284,45 @@
   ```
 </details>   
 
+### 27. Remove Element
+
+
+    
+    
+
+<details>
+  <summary>Hint</summary>
+
+
+  - [x] Initialize leftPointer to 0 and rightPointer to 0.
+  - [x] Traverse the array with rightPointer until it reaches the end of the array:
+  - [x] If nums[rightPointer] is equal to val, increment rightPointer to skip this element.
+  - [x] If nums[rightPointer] is not equal to val, assign nums[rightPointer] to nums[leftPointer], and increment both leftPointer and rightPointer.
+  - [x] Return leftPointer, which represents the new length of the array after removing the elements equal to val.
+  - [ ] <a href="https://www.youtube.com/watch?v=ZYKDfL2av0Q"> YouTube </a>  
+
+    <details> 
+        To solve the problem of removing all occurrences of a specified value from an array, initialize two pointers: leftPointer and rightPointer, both set to 0. Use a while loop to traverse the array with rightPointer. If nums[rightPointer] equals the specified value, increment rightPointer to skip it. If nums[rightPointer] is not the specified value, copy nums[rightPointer] to nums[leftPointer], then increment both leftPointer and rightPointer. Continue this process until rightPointer reaches the end of the array. The value of leftPointer at the end of the loop will indicate the number of elements that are not equal to the specified value. The array is modified in place, and the final value of leftPointer is returned as the result. 
+    </details>
+    
+</details>
+
+<details>
+  <summary>Solutions:</summary>
+  
+  ```java:
+        int leftPointer=0;
+        int rightPointer =0;
+        while (rightPointer<nums.length) {
+            if (nums[rightPointer] == val) {
+                rightPointer++;
+            } else {
+                nums[leftPointer] = nums[rightPointer];
+                leftPointer++;
+                rightPointer++;
+            }
+        } return leftPointer;
+
+  ```
+</details>   
+
