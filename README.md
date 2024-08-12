@@ -326,30 +326,72 @@
   ```
 </details>   
 
+
+### 26. Remove Duplicates from Sorted Array
+
+<details>
+  <summary>Hint</summary>
+
+- [x] Initialize `leftPointer` to 1 and `rightPointer` to 1.
+- [x] Traverse the array with `rightPointer` until it reaches the end of the array.
+- [x] If `nums[rightPointer]` is equal to `nums[rightPointer - 1]`, increment `rightPointer` to skip this element.
+- [x] If `nums[rightPointer]` is not equal to `nums[rightPointer - 1]`, assign `nums[rightPointer]` to `nums[leftPointer]`, and increment both `leftPointer` and `rightPointer`.
+- [x] Return `leftPointer`, which represents the new length of the array after removing duplicates.
+
+  <details> 
+      To solve the problem of removing duplicates from a sorted array, initialize two pointers: `leftPointer` and `rightPointer`, both set to 1. Use a `while` loop to traverse the array with `rightPointer`. If `nums[rightPointer]` equals `nums[rightPointer - 1]`, increment `rightPointer` to skip it. If `nums[rightPointer]` is not equal to `nums[rightPointer - 1]`, copy `nums[rightPointer]` to `nums[leftPointer]`, then increment both `leftPointer` and `rightPointer`. Continue this process until `rightPointer` reaches the end of the array. The value of `leftPointer` at the end of the loop will indicate the number of unique elements. The array is modified in place, and the final value of `leftPointer` is returned as the result. 
+  </details>
+
+</details>
+
+<details>
+  <summary>Solutions:</summary>
+
+  ```java
+  class Solution {
+      public int removeDuplicates(int[] nums) {
+          int leftPointer = 1;
+          int rightPointer = 1;
+          while (rightPointer < nums.length) {
+              if (nums[rightPointer] == nums[rightPointer - 1]) {
+                  rightPointer++;
+              } else {
+                  nums[leftPointer] = nums[rightPointer];
+                  leftPointer++;
+                  rightPointer++;
+              }
+          }
+          return leftPointer;
+      }
+  }
+```
+</details>
+
 ## Random
+
 <details> 
   <summary> Binary Search </summary> 
   
-  ```
-class Solution {
-    public int search(int[] nums, int target) {
-        int start = 0; 
-        int end = nums.length-1; 
-        while (start <= end) {
-            int mid = (end+start)/2;
-            if (nums[mid] == target) {
-                return mid;
-            }
-            else if (nums[mid] < target) {
-                start = mid+1;
-            } 
-            else {
-                end = mid-1;
-            }
-            
-        } return -1;
+  ```java:
+    class Solution {
+        public int search(int[] nums, int target) {
+            int start = 0; 
+            int end = nums.length-1; 
+            while (start <= end) {
+                int mid = (end+start)/2;
+                if (nums[mid] == target) {
+                    return mid;
+                }
+                else if (nums[mid] < target) {
+                    start = mid+1;
+                } 
+                else {
+                    end = mid-1;
+                }
+                
+            } return -1;
+        }
     }
-}
 ```
 
 </details>
