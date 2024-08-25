@@ -1,6 +1,6 @@
 # Blind 75
 ## Arrays
-### Two Sum
+### [Two Sum](https://leetcode.com/problems/two-sum/description/)
 
 === "Hints"
     ```java 
@@ -35,7 +35,7 @@
     To find two numbers in an array that add up to a target, use a HashMap for quick lookups. As you iterate through the array, calculate the complement needed to reach the target for each number. Check if this complement is already in the HashMap. If it is, return the indices of the current number and the complement. If not, store the current number and its index in the HashMap for future reference. This method allows you to find the solution efficiently in one pass through the array.
 
 
-### Best Time to Buy and Sell Stock
+### [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 
 === "Hints"
     ```java
@@ -61,7 +61,7 @@
 ??? summary "Summary"
     The new number is lower than the lowest point found so far, so you update it. The new number is higher than your low point so it is a possible solution and you calculate the difference to find the profit. If it's higher than your max profit found so far, update. <a href="https://www.youtube.com/watch?v=eMSfBgbiEjk"> YouTube Resource </a>
 
-### Contains Duplicate
+### [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)
 
 === "Hints"
 
@@ -88,7 +88,7 @@
     ```      
 === "Resources"
 
-### Product of Array Except Self
+### [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/)
 
 === "Hints"
     ```java
@@ -126,7 +126,7 @@
 === "Resources"
     - [YouTube](https://www.youtube.com/watch?v=tSRFtR3pv74)
 
-### Maximum Subarray
+### [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/)
 === "Hints"
     ```java
     //Initialize Variables: Set maxSum to Integer.MIN_VALUE and currSum to 0.
@@ -152,7 +152,7 @@
     ```
 === "Resources"
 
-### Maximum Product Subarray
+### [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/description/)
 
 === "Hints"
 
@@ -184,7 +184,7 @@
     ```
 === "Resources"
 
-### Find Minimum in Rotated Sorted Array
+### [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/)
 
 === "Hints"
     ```java
@@ -210,7 +210,7 @@
     ```
 
 === "Resources"
-
+ 
 ??? summary "Summary"
     The midpoint calculation int mid = left + (right - left) / 2 is used in binary search to avoid potential integer overflow and ensure accurate results. When left and right are large, directly using (left + right) / 2 could lead to overflow, as their sum might exceed the maximum integer value. By calculating mid as left + (right - left) / 2, the difference right - left is smaller and less prone to overflow, and dividing by 2 ensures the result is within a safe range. Adding left then adjusts the midpoint correctly within the current search segment, ensuring precise calculations without risking overflow.
 
