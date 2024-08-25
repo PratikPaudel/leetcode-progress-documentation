@@ -98,7 +98,6 @@
     //Iterate from right to left, storing cumulative products in suffixProducts.
     //Multiply corresponding elements of prefixProducts and suffixProducts to fill resultArray.
     //Return the final resultArray.
-    // <a href="https://www.youtube.com/watch?v=tSRFtR3pv74"> YouTube </a>
     ```
 === "Solutions"
     ```java
@@ -134,7 +133,6 @@
     //Update maxSum: Set maxSum to the greater of maxSum and currSum.
     //Reset currSum if Negative: If currSum is less than 0, reset it to 0.
     //Return maxSum: After the loop, return maxSum.
-    - [ ] <a href="https://www.youtube.com/watch?v=hLPkqd60-28"> YouTube Link </a>
     ```
 
 === "Solutions"
@@ -151,6 +149,7 @@
         } return maxSum;
     ```
 === "Resources"
+    <a href="https://www.youtube.com/watch?v=hLPkqd60-28"> YouTube Link </a>
 
 ### [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/description/)
 
@@ -163,7 +162,6 @@
     //Update Prefix and Suffix: Multiply prefix by nums[i] and suffix by nums[n-i-1].
     //Update Result: Use Math.max to set result to the maximum of result, prefix, and suffix.
     //Return Result: Cast result to int and return it.
-    - [ ] <a href="https://www.youtube.com/watch?v=hnswaLJvr6g"> YouTube </a>
     ```
 
 === "Solutions"
@@ -183,6 +181,7 @@
     return (int) result;
     ```
 === "Resources"
+    - <a href="https://www.youtube.com/watch?v=hnswaLJvr6g"> YouTube </a>
 
 ### [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/)
 
