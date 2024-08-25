@@ -1,0 +1,53 @@
+site_name: Leetcode Progress Documentation
+site_url:
+theme:
+  logo: icon.png
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: white
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: black
+
+plugins:
+  - search
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/pratikpaudel
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/heypratikpaudel/
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+copyright: |
+  &copy; 2023 <a href="https://github.com/pratikpaudel"  target="_blank" rel="noopener">Pratik Paudel</a>
