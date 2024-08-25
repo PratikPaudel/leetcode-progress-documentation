@@ -1,5 +1,6 @@
 # Blind 75
 ## Arrays
+
 ### [Two Sum](https://leetcode.com/problems/two-sum/description/)
 
 === "Hints"
