@@ -2,6 +2,9 @@ site_name: Leetcode Progress Documentation
 site_url:
 theme:
   logo: icon.png
+  icon:
+    admonition:
+      <type>: simple/leetcode
   name: material
   features:
     - navigation.tabs
@@ -37,17 +40,21 @@ extra:
       link: https://www.linkedin.com/in/heypratikpaudel/
 
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - admonition
   - pymdownx.arithmatex:
       generic: true
   - footnotes
-  - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.tabbed:
+        alternate_style: true
   - pymdownx.mark
   - attr_list
+  - def_list
+extra_css:
+  - stylesheets/extra.css
 copyright: |
   &copy; 2023 <a href="https://github.com/pratikpaudel"  target="_blank" rel="noopener">Pratik Paudel</a>
