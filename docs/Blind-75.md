@@ -28,6 +28,8 @@
         map.put(nums[i], i);
         }
     ```
+=== "Resources"
+
 ??? summary "Summary"
 
     To find two numbers in an array that add up to a target, use a HashMap for quick lookups. As you iterate through the array, calculate the complement needed to reach the target for each number. Check if this complement is already in the HashMap. If it is, return the indices of the current number and the complement. If not, store the current number and its index in the HashMap for future reference. This method allows you to find the solution efficiently in one pass through the array.
@@ -38,7 +40,7 @@
 === "Hints"
     ```java
     //Track the lowest price while iterating through the prices.
-     //Calculate the profit by subtracting the tracked minimum price from each current price.
+    //Calculate the profit by subtracting the tracked minimum price from each current price.
     ```
 
 === "Solutions"
@@ -54,6 +56,7 @@
             }
             return maxprofit;
     ```      
+=== "Resources"
 
 ??? summary "Summary"
     The new number is lower than the lowest point found so far, so you update it. The new number is higher than your low point so it is a possible solution and you calculate the difference to find the profit. If it's higher than your max profit found so far, update. <a href="https://www.youtube.com/watch?v=eMSfBgbiEjk"> YouTube Resource </a>
@@ -83,7 +86,7 @@
         return false;
         }
     ```      
-
+=== "Resources"
 
 ### Product of Array Except Self
 
@@ -95,7 +98,7 @@
     //Iterate from right to left, storing cumulative products in suffixProducts.
     //Multiply corresponding elements of prefixProducts and suffixProducts to fill resultArray.
     //Return the final resultArray.
-    - [ ] <a href="https://www.youtube.com/watch?v=tSRFtR3pv74"> YouTube </a>
+    // <a href="https://www.youtube.com/watch?v=tSRFtR3pv74"> YouTube </a>
     ```
 === "Solutions"
     ```java
@@ -120,6 +123,8 @@
     
         return resultArray;
     ```  
+=== "Resources"
+    - [YouTube](https://www.youtube.com/watch?v=tSRFtR3pv74)
 
 ### Maximum Subarray
 === "Hints"
@@ -145,6 +150,7 @@
             }
         } return maxSum;
     ```
+=== "Resources"
 
 ### Maximum Product Subarray
 
@@ -176,7 +182,7 @@
     }
     return (int) result;
     ```
-
+=== "Resources"
 
 ### Find Minimum in Rotated Sorted Array
 
@@ -202,6 +208,8 @@
             }
         } return nums[left];
     ```
+
+=== "Resources"
 
 ??? summary "Summary"
     The midpoint calculation int mid = left + (right - left) / 2 is used in binary search to avoid potential integer overflow and ensure accurate results. When left and right are large, directly using (left + right) / 2 could lead to overflow, as their sum might exceed the maximum integer value. By calculating mid as left + (right - left) / 2, the difference right - left is smaller and less prone to overflow, and dividing by 2 ensures the result is within a safe range. Adding left then adjusts the midpoint correctly within the current search segment, ensuring precise calculations without risking overflow.
