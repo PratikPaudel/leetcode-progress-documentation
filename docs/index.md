@@ -10,6 +10,7 @@
     //If yes, return the current index and the index of the complement
     //If no, add the number and its index to the HashMap
     ```
+
 === "Solutions"
     ``` Java
         if (nums == null || nums.length < 2) {
