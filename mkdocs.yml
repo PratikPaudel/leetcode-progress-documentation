@@ -61,6 +61,7 @@ markdown_extensions:
   - pymdownx.mark
   - attr_list
   - def_list
+  - tables
 extra_css:
   - stylesheets/extra.css
 copyright: |
