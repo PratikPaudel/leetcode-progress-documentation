@@ -42,7 +42,6 @@ extra:
       link: https://www.linkedin.com/in/heypratikpaudel/
 
 markdown_extensions:
-  - markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
