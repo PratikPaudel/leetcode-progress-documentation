@@ -8,6 +8,7 @@ data set. Arrays are also expensive to maintain new insertions and deletions. </
 <p> A linked list is a linear, dynamic data structure where each node contains data and a reference to the next node. The list can grow or shrink as needed, with the head pointing to the first node, or null if the list is empty. The last node points to null. </p>
 
 ```mermaid
+
 graph LR
     head
     A["4 | next"] --> B["15 | next "]
