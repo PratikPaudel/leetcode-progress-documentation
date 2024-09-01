@@ -5,10 +5,24 @@
 <p> One disadvantage of using arrays to store data is that arrays are static structures and therefore cannot be easily extended or reduced to fit the
 data set. Arrays are also expensive to maintain new insertions and deletions. </p> 
 
-The number of nodes in a list is not fixed and can grow and shrink on
-demand. Each node of a linked list is made up of two items - the data and a reference to the next node. The last node has a reference to null.
-The entry point into a linked list is called the head of the list. It should be noted that head is not a separate node, but the reference to the first
-node. If the list is empty then the head is a null reference.
+<p> A linked list is a linear, dynamic data structure where each node contains data and a reference to the next node. The list can grow or shrink as needed, with the head pointing to the first node, or null if the list is empty. The last node points to null. </p>
+
+```mermaid
+graph LR
+    head
+    A["4 | next"] --> B["15 | next "]
+    B --> C["7 | next "]
+    C --> D["1 | next "]
+    D --> E[NULL]
+
+    classDef noStroke fill:none,stroke:none;
+    class head,E noStroke;
+    
+    classDef defaultStyle fill:none,stroke:#fff;
+    class A,B,C,D defaultStyle;
+
+```
 
 
-### Singly Linked List
+<p> <b> Singly Linked List </b> </p>
+
