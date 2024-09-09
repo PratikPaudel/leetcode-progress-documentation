@@ -24,6 +24,73 @@ graph LR
 
 ```
 
-
 <p> <b> Singly Linked List </b> </p>
+Notes: To track the element, we need head node anda tail node. Last valid node with data stored is tail node. First node with data stored is head node. 
+We get information from a node and then go to the next node information it has until the node points to null.
 
+**Operations in LinkedList:**
+
+## addFirst - O(1)
+
+### Steps:
+1. Create a new node: `Node newNode = new Node(data);`
+2. Point the next of the new node to the head: `newNode.next = head;`
+3. Point the head to the new node: `head = newNode;`
+
+``` java
+public void addFirst(int data) {
+    Node newNode = new Node(data);
+    if (head == null) {
+        head = tail = newNode;
+        return;
+    }
+    newNode.next = head;
+    head = newNode;
+}
+```
+   
+## addLast - O(1)
+
+### Steps:
+1. Create a new node: `Node newNode = new Node(data);`
+2. Point the next of the tail node to the newNode: `tail.next = newNode;`
+3. Set the tail to the newNode: `tail = newNode;`
+
+```java
+public void addLast(int data) {
+    Node newNode = new Node(data);
+    if (head == null) {
+        head = tail = newNode;
+        return;
+    }
+    tail.next = newNode;
+    tail = newNode;
+}
+```
+
+### Print a linkedlist - O(N)
+
+### Steps:
+1. Initialize a temporary node to traverse the list: Node temp = head;
+2. Check if the list is empty:
+3. If yes, print "The list is empty" and return.
+4. Traverse through the list:
+5. Print the data of the current node: System.out.print(temp.data);
+6. Move to the next node: temp = temp.next;
+
+> Note: You are traversing through an existing list, so you don't need to create any new nodes. 
+
+
+```java
+public void printList() {
+    Node temp = head;
+    if (head == null) {
+        System.out.print("The list is empty");
+        return;
+    }
+    while (temp != null) {
+        System.out.print(temp.data);
+        temp = temp.next;
+    }
+}
+```
