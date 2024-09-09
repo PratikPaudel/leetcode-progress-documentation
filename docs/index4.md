@@ -30,9 +30,9 @@ We get information from a node and then go to the next node information it has u
 
 **Operations in LinkedList:**
 
-## addFirst - O(1)
+### addFirst - O(1)
 
-### Steps:
+**Steps:**
 1. Create a new node: `Node newNode = new Node(data);`
 2. Point the next of the new node to the head: `newNode.next = head;`
 3. Point the head to the new node: `head = newNode;`
@@ -49,9 +49,10 @@ public void addFirst(int data) {
 }
 ```
    
-## addLast - O(1)
+### addLast - O(1)
 
-### Steps:
+**Steps:**
+
 1. Create a new node: `Node newNode = new Node(data);`
 2. Point the next of the tail node to the newNode: `tail.next = newNode;`
 3. Set the tail to the newNode: `tail = newNode;`
@@ -70,7 +71,8 @@ public void addLast(int data) {
 
 ### Print a linkedlist - O(N)
 
-### Steps:
+**Steps:**
+
 1. Initialize a temporary node to traverse the list: Node temp = head;
 2. Check if the list is empty:
 3. If yes, print "The list is empty" and return.
@@ -94,3 +96,25 @@ public void printList() {
     }
 }
 ```
+
+### Size of a linkedlist - O(N)
+
+**Steps:**
+
+1. Initialize a temporary node to traverse the list: Node temp = head;
+2. Initialize a variable to store the size of the list: int size = 0;
+3. Traverse through the list, keep adding to the variables. 
+4. Return the size of the list.
+
+```java
+public int size() {
+    Node temp = head;
+    int size = 0;
+    while (temp != null) {
+        size++;
+        temp = temp.next;
+    }
+    return size;
+}
+```
+
