@@ -33,6 +33,7 @@ We get information from a node and then go to the next node information it has u
 ### addFirst - O(1)
 
 **Steps:**
+
 1. Create a new node: `Node newNode = new Node(data);`
 2. Point the next of the new node to the head: `newNode.next = head;`
 3. Point the head to the new node: `head = newNode;`
@@ -73,12 +74,12 @@ public void addLast(int data) {
 
 **Steps:**
 
-1. Initialize a temporary node to traverse the list: Node temp = head;
+1. Initialize a temporary node to traverse the list: `Node temp = head;`
 2. Check if the list is empty:
 3. If yes, print "The list is empty" and return.
 4. Traverse through the list:
-5. Print the data of the current node: System.out.print(temp.data);
-6. Move to the next node: temp = temp.next;
+5. Print the data of the current node: `System.out.print(temp.data);`
+6. Move to the next node: `temp = temp.next;`
 
 > Note: You are traversing through an existing list, so you don't need to create any new nodes. 
 
@@ -101,8 +102,8 @@ public void printList() {
 
 **Steps:**
 
-1. Initialize a temporary node to traverse the list: Node temp = head;
-2. Initialize a variable to store the size of the list: int size = 0;
+1. Initialize a temporary node to traverse the list: `Node temp = head;`
+2. Initialize a variable to store the size of the list: `int size = 0;`
 3. Traverse through the list, keep adding to the variables. 
 4. Return the size of the list.
 
@@ -117,4 +118,6 @@ public int size() {
     return size;
 }
 ```
+
+
 
