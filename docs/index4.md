@@ -119,5 +119,30 @@ public int size() {
 }
 ```
 
+### Reverse a linked list - O(N)
+
+***Steps:***
+
+1. Initialize three nodes: `Node current = head, prev = null, next = null;`
+2. Traverse through the list and do the following 4 steps:
+3. `next = current.next;` Store the `current.next` node of the next node to preserve that value.
+4. `current.next = prev;` Point the next of the current node to the previous node.
+5. `prev = current;` Move the previous node to the current node.
+6. `current = next;` Move the current node to the next node.
+7. `head = prev;` Set the head to the previous node after done with the loop.
+
+```java
+public void reverse() {
+    Node current = head, prev = null, next = null;
+    while (current != null) {
+        next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
+    }
+    head = prev;
+}
+```
+
 
 
