@@ -83,3 +83,17 @@ graph LR;
 
 - **Resources:** [TutorialKart: Java StringBuilder](https://www.tutorialkart.com/java/java-stringbuilder/)
 
+
+
+
+<h6> String related questions to ask during interviews: </h6>
+    1. Are there specific characters to consider (e.g., special characters, whitespace)?
+    2. Is the string case-sensitive?
+    3. What are the time and space complexity requirements?
+    4. How large can the input string be?
+    5. Are there limitations on operations I can use (e.g., no built-in string functions)?
+    6. Can I modify the original string, or do I need to return a new string?
+    7. Should the output maintain the order of characters from the original string?
+    8. Are there multiple ways to solve this problem, or is there a preferred method?
+
+
